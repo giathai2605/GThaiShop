@@ -11,7 +11,7 @@ $router->filter('auth', function () {
 		die;
 	}
 });
-
+$router->get('test', [App\Controllers\AuthController::class, 'test']);
 $router->get('login', [App\Controllers\AuthController::class, 'renderLogin']);
 $router->post('login/verify', [App\Controllers\AuthController::class, 'handleLogin']);
 $router->get('logout', [App\Controllers\AuthController::class, 'logout']);

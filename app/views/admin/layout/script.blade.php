@@ -1,0 +1,2 @@
+<script defer src="{{RESOURCES_PATH}}js/admin.js"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v2b4487d741ca48dcbadcaf954e159fc61680799950996" integrity="sha512-D/jdE0CypeVxFadTejKGTzmwyV10c1pxZk/AqjJuZbaJwGMyNHY3q/mTPWqMUnFACfCTunhZUVcd4cV78dK1pQ==" data-cf-beacon='{"rayId":"7b6d37836e8007a7","version":"2023.3.0","r":1,"b":1,"token":"67f7a278e3374824ae6dd92295d38f77","si":100}' crossorigin="anonymous"></script>

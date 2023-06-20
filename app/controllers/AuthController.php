@@ -19,6 +19,10 @@ class AuthController extends BaseController
         $this->request = new RequestController();
         $this->validator = new Validator($this->request->all());
     }
+    public function test()
+    {
+        $this->render('admin.index');
+    }
     public function isLoggedIn()
     {
         return isset($_SESSION['auth']) && !empty($_SESSION['auth']);
@@ -40,23 +44,21 @@ class AuthController extends BaseController
     }
     public function renderLogin()
     {
-        $title = "Đăng nhập 🐝 Sunbee";
         if ($this->isLoggedIn() || $this->isRemembered()) {
             $message = "Bạn đã đăng nhập";
             return redirect('', $message, 'back');
         } else {
-            $this->render('auth.login', compact('title'));
+            $this->render('auth.login');
         }
     }
 
     public function renderRegister()
     {
-        $title = "Đăng ký 🐝 Sunbee";
         if (isset($_SESSION['auth']) && !empty($_SESSION['auth'])) {
             $message = "Vui lòng đăng xuất để đăng ký tài khoản mới";
             return redirect('errors', $message, 'back');
         } else {
-            $this->render('auth.register', compact('title'));
+            $this->render('auth.register');
         }
     }
 
