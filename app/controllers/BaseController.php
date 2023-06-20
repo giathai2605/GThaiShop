@@ -1,6 +1,8 @@
 <?php
 namespace App\Controllers;
 use eftec\bladeone\BladeOne;
+use Exception;
+
 class BaseController{
 
     protected function render($viewFile, $data = []){
